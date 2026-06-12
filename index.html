@@ -526,8 +526,8 @@
     background: var(--warm-white);
   }
   .owner-silhouette {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     background: linear-gradient(145deg, var(--blush), var(--dusty-rose));
     margin: 0 auto 24px;
@@ -537,9 +537,9 @@
     overflow: hidden;
   }
   .owner-silhouette svg {
-    width: 70px;
-    height: 90px;
-    fill: rgba(255,255,255,0.7);
+    width: 110px;
+    height: 120px;
+    fill: rgba(255,255,255,0.75);
   }
   .owner-name {
     font-family: 'Noto Serif JP', serif;
@@ -1048,16 +1048,26 @@
       <div class="divider"></div>
     </div>
     <div class="owner-silhouette fade-in">
-      <svg viewBox="0 0 70 90" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="35" cy="22" rx="14" ry="16"/>
-        <path d="M10 90 Q10 58 35 55 Q60 58 60 90Z"/>
-        <path d="M10 68 Q0 60 4 48 Q8 40 16 44 Q14 55 18 62Z" opacity="0.6"/>
-        <path d="M60 68 Q70 60 66 48 Q62 40 54 44 Q56 55 52 62Z" opacity="0.6"/>
+      <svg viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg" width="120" height="130">
+        <!-- 首 -->
+        <rect x="52" y="52" width="16" height="18" rx="4"/>
+        <!-- 頭 ショートカット -->
+        <ellipse cx="60" cy="36" rx="18" ry="20"/>
+        <!-- ショートカットの毛流れ（耳上あたりで切れる） -->
+        <path d="M42 30 Q36 28 36 38 Q36 46 42 50" fill="rgba(255,255,255,0.25)" stroke="none"/>
+        <path d="M78 30 Q84 28 84 38 Q84 46 78 50" fill="rgba(255,255,255,0.25)" stroke="none"/>
+        <!-- 前髪 -->
+        <path d="M44 22 Q52 14 68 16 Q76 18 78 26 Q70 20 60 20 Q50 20 44 26Z" fill="rgba(255,255,255,0.2)"/>
+        <!-- 肩・上半身（鎖骨あたりまで） -->
+        <path d="M20 130 L20 100 Q20 85 35 80 Q44 76 52 70 L68 70 Q76 76 85 80 Q100 85 100 100 L100 130Z"/>
+        <!-- 肩のライン -->
+        <path d="M20 100 Q20 90 35 86 Q44 82 52 70" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <path d="M100 100 Q100 90 85 86 Q76 82 68 70" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
       </svg>
     </div>
     <div class="fade-in">
       <div class="owner-name">德田 利江美</div>
-      <div class="owner-name-en">Riemi Tokuda</div>
+      <div class="owner-name-en">Riemi</div>
       <div class="owner-tags">
         <span class="owner-tag">美容師歴 33年</span>
         <span class="owner-tag">管理美容師免許</span>
