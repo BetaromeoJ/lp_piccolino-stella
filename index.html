@@ -406,6 +406,51 @@
     font-size: 0.8rem;
     color: var(--gray);
   }
+  .menu-kids {
+    background: linear-gradient(135deg, #f5ede8, #faf8f5);
+    border: 1px solid var(--blush);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+  .menu-kids-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--brown);
+    margin-bottom: 10px;
+  }
+  .menu-kids-desc {
+    font-size: 0.8rem;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  .menu-kids-row {
+    display: flex;
+    gap: 12px;
+  }
+  .menu-kids-item {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px 10px;
+    text-align: center;
+    border: 1px solid var(--light-gray);
+  }
+  .menu-kids-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--gray);
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .menu-kids-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--dusty-rose);
+    font-weight: 600;
+  }
   .payment-row {
     display: flex;
     align-items: center;
@@ -417,6 +462,27 @@
     font-size: 0.75rem;
     color: var(--gray);
     letter-spacing: 0.05em;
+  }
+  .menu-sub {
+    font-size: 0.75rem;
+    color: var(--gray);
+  }
+  .menu-sub-indent {
+    font-size: 0.82rem;
+    color: var(--dark);
+    padding-left: 1em;
+  }
+  .menu-price-accent {
+    color: var(--dusty-rose);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+  .menu-note {
+    font-size: 0.72rem;
+    color: var(--gray);
+    padding: 4px 4px 12px;
+    border-bottom: none !important;
   }
   .payment-tag {
     background: var(--warm-white);
@@ -466,6 +532,38 @@
   }
   .pickup-list {
     list-style: none;
+  }
+  .alorb-box {
+    background: linear-gradient(135deg, #f5ede8, #faf8f5);
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 12px;
+    border: 1px solid var(--blush);
+  }
+  .alorb-title {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--brown);
+    margin-bottom: 10px;
+  }
+  .alorb-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .alorb-tag {
+    background: #fff;
+    border: 1px solid var(--light-gray);
+    border-radius: 50px;
+    padding: 4px 10px;
+    font-size: 0.72rem;
+    color: var(--gray);
+  }
+  .alorb-note {
+    font-size: 0.75rem;
+    color: var(--gray);
+    line-height: 1.7;
   }
   .pickup-list li {
     font-size: 0.82rem;
@@ -937,8 +1035,34 @@
       <div class="menu-popular-name">カット ＋ カラー ＋ トリートメント</div>
       <p class="menu-popular-note">まとめてのご予約がお得です。詳しくはLINEでご相談ください。</p>
     </div>
+    <div class="menu-kids fade-in">
+      <div class="menu-kids-title">✂ お子さま・学生さんも大歓迎</div>
+      <p class="menu-kids-desc">カット料金はリーズナブルにご用意しています。<br>シャンプー・ブロー込みで、完全個室のゆったりした空間でご利用いただけます。</p>
+      <div class="menu-kids-row">
+        <div class="menu-kids-item">
+          <span class="menu-kids-label">中・高校生</span>
+          <span class="menu-kids-price">¥2,750</span>
+        </div>
+        <div class="menu-kids-item">
+          <span class="menu-kids-label">チャイルド<br><small>（小学生以下）</small></span>
+          <span class="menu-kids-price">¥1,650</span>
+        </div>
+      </div>
+    </div>
     <table class="menu-table fade-in">
-      <tr><td>✂ カット</td><td>¥4,400〜</td></tr>
+      <tr>
+        <td>✂ カット<br><span class="menu-sub">一般</span></td>
+        <td>¥4,400〜</td>
+      </tr>
+      <tr>
+        <td><span class="menu-sub-indent">中・高校生</span></td>
+        <td><span class="menu-price-accent">¥2,750</span></td>
+      </tr>
+      <tr>
+        <td><span class="menu-sub-indent">チャイルド（小学生以下）</span></td>
+        <td><span class="menu-price-accent">¥1,650</span></td>
+      </tr>
+      <tr><td colspan="2" class="menu-note">※カットはシャンプー・ブロー込み</td></tr>
       <tr><td>🎨 カラー</td><td>¥4,400〜</td></tr>
       <tr><td>🌀 パーマ</td><td>¥8,800〜</td></tr>
       <tr><td>〜 ストレート</td><td>¥11,000〜</td></tr>
@@ -997,15 +1121,28 @@
     <div class="pickup-card fade-in">
       <div class="pickup-card-header">
         <div class="pickup-card-icon">💆</div>
-        <div class="pickup-card-name">ヘッドスパ</div>
+        <div class="pickup-card-name">ヘッドスパ<br><small style="font-size:0.75rem;opacity:0.85;">ALORB SPA</small></div>
         <div class="pickup-card-price">¥2,750〜</div>
       </div>
       <div class="pickup-card-body">
-        <p class="pickup-card-desc">頭皮をしっかりほぐすヘッドスパで、日常の疲れをリセット。施術と一緒に、心までほぐれる時間を。</p>
-        <ul class="pickup-list">
+        <p class="pickup-card-desc">当サロンのヘッドスパは、<strong>「一生涯、美しい髪と共に過ごせるように」</strong>をコンセプトに掲げる <em>ALORB SPA（アローブスパ）</em> を採用。髪の表面だけでなく、健康な髪を育む根本「頭皮環境のケア」にアプローチします。</p>
+        <div class="alorb-box">
+          <div class="alorb-title">🌿 お好みのアロマをお選びいただけます</div>
+          <div class="alorb-grid">
+            <span class="alorb-tag">🌸 フローラル系</span>
+            <span class="alorb-tag">🍋 シトラス系</span>
+            <span class="alorb-tag">🌿 ハーバル・グリーン系</span>
+            <span class="alorb-tag">🌲 ウッディ・森林系</span>
+            <span class="alorb-tag">🧘 リラクゼーション系</span>
+            <span class="alorb-tag">🍑 フルーティ系</span>
+          </div>
+          <p class="alorb-note">その日の気分や好みに合わせて、専用のキャリアエッセンスとアロマを調合してお使いいただけます。</p>
+        </div>
+        <ul class="pickup-list" style="margin-top:14px;">
           <li>自分へのご褒美に</li>
           <li>頭皮の疲れ・コリが気になる</li>
-          <li>リラックスしたい</li>
+          <li>心身をリセットしたい</li>
+          <li>髪と頭皮を根本からケアしたい</li>
         </ul>
       </div>
     </div>
